@@ -1,0 +1,16 @@
+services:
+  stepstothefuture_py:
+    container_name: stepstothefuture_py
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+
+volumes:
+  postgres-data:
+  redis-data:
+
+networks:
+  my-network:
+    driver: bridge
